@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+Route::get('/product', 'ProductController@index')->name('view.product');
+Route::post('/product/save', 'ProductController@store')->name('view.product.add');
